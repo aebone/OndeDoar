@@ -3,9 +3,31 @@
     xmlns="http://xamarin.com/schemas/2014/forms" 
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
     xmlns:local="clr-namespace:OndeDoar" 
-    x:Class="OndeDoar.OndeDoarPage"
-    BackgroundImage="bg.png">
+    x:Class="OndeDoar.MainPage"
+    BackgroundImage="bg.jpg">
 
-
+   
     
+    <Grid Padding="20">
+         
+        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40" ></RowDefinition>
+            <RowDefinition Height="40" ></RowDefinition>
+            <RowDefinition Height="150" ></RowDefinition>
+            <RowDefinition Height="150"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>        
+
+        <Label Text="Onde Doar" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" HorizontalTextAlignment="Center" FontSize="28" FontAttributes="Bold" TextColor="White"/>
+        <Label Text="Consulte os locais para doação de roupas, alimentos, eletrônicos e outros itens em Porto Alegre" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" TextColor="White" HorizontalTextAlignment="Center"/>
+        <Button Text="Ver locais no mapa" Grid.Row="2" Grid.Column="0" BackgroundColor="#FFC928"  TextColor="White" />
+        <Button Text="Ver lista de locais" Grid.Row="2" Grid.Column="1"  BackgroundColor="#287cbe" TextColor="White" />
+        <Button Text="Enviar um local" Grid.Row="3" Grid.Column="0"  BackgroundColor="#287cbe" TextColor="White" />
+        <Button Text="FAQ" Grid.Row="3" Grid.Column="1" BackgroundColor="#FFC928" TextColor="White"  />
+
+    </Grid>
 </ContentPage>

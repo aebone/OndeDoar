@@ -8,7 +8,7 @@ namespace OndeDoar
         {
             InitializeComponent();
 
-            MainPage = new OndeDoarPage();
+            MainPage = new MainPage();
         }
 
         protected override void OnStart()

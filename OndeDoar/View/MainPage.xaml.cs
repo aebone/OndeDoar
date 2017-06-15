@@ -2,9 +2,9 @@
 
 namespace OndeDoar
 {
-    public partial class OndeDoarPage : ContentPage
+    public partial class MainPage : ContentPage
     {
-        public OndeDoarPage()
+        public MainPage()
         {
             InitializeComponent();
         }
