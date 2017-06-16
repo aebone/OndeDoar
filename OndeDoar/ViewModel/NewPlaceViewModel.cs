@@ -108,7 +108,9 @@ namespace OndeDoar.ViewModel
 
 		private async void ExecuteAddPlaceCommand()
 		{
-			Debug.WriteLine($"biuguguy {DateTime.Now} { NameText }");
+             Debug.WriteLine("h8y87y6t6");
+             await Application.Current.MainPage.DisplayAlert("Atenção", "Local adicionado com sucesso. (Sujeito a verificação)", "OK");
+    
 			await SaveTask(new Place { 
                 Name = NameText, 
                 Address = AddressText, 
@@ -117,7 +119,7 @@ namespace OndeDoar.ViewModel
                 What = WhatText, 
                 Phone = PhoneText 
             });
-		}
+        }
 
 		public async Task SaveTask(Place item)
 		{

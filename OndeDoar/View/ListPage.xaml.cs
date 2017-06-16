@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-
+using OndeDoar.ViewModel;
 using Xamarin.Forms;
 
 namespace OndeDoar.View
@@ -10,6 +10,7 @@ namespace OndeDoar.View
         public ListPage()
         {
             InitializeComponent();
+            BindingContext = new ListViewModel(); 
         }
     }
 }

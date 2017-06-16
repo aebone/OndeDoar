@@ -69,6 +69,7 @@
     <Compile Include="Model\Repository.cs" />
     <Compile Include="Service\AzureService.cs" />
     <Compile Include="ViewModel\NewPlaceViewModel.cs" />
+    <Compile Include="ViewModel\ListViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="View\" />
