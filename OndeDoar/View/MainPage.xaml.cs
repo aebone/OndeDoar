@@ -1,4 +1,5 @@
-﻿using Xamarin.Forms;
+﻿using OndeDoar.ViewModel;
+using Xamarin.Forms;
 
 namespace OndeDoar
 {
@@ -7,6 +8,7 @@ namespace OndeDoar
         public MainPage()
         {
             InitializeComponent();
+            BindingContext = new MainViewModel(Navigation); 
         }
     }
 }
