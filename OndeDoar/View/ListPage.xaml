@@ -5,7 +5,7 @@
     x:Class="OndeDoar.View.ListPage"
     Title="Locais (Lista)">
 
-    <StackLayout Padding="10" Spacing="10">
+    <StackLayout Padding="10" Spacing="6">
         <ActivityIndicator IsRunning="{Binding IsBusy}" IsVisible="{Binding IsBusy}"/>
 
         <ListView ItemsSource="{Binding Places}" SelectedItem="{Binding SelectedItem}">

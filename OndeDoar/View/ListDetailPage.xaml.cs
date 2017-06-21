@@ -2,20 +2,18 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using OndeDoar.Model;
+using OndeDoar.ViewModel;
 using Xamarin.Forms;
 
 namespace OndeDoar.View
 {
     public partial class ListDetailPage : ContentPage
     {
-        string sel;
 
         public ListDetailPage(Place selected)
         {
             InitializeComponent();
-            //sel = selected.Name;
-            //Debug.WriteLine(sel);
-            ItemName.Text = selected.Name;
+            BindingContext = new ListDetailViewModel(selected);
         }
     }
 }

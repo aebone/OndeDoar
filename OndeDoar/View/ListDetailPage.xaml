@@ -5,9 +5,17 @@
     x:Class="OndeDoar.View.ListDetailPage"
     Title="Detalhes">
 	<ContentPage.Content>
-
-        <StackLayout>
-            <Label x:Name="ItemName"/>
+        
+        <StackLayout Padding="20" Spacing="10">
+            <Label Text="{ Binding Name }" FontAttributes="Bold" HorizontalOptions="Center" TextColor="#ea2763" FontSize="Large" Margin="0,0,0,10"/>
+            <Label Text="Endereço" FontAttributes="Bold" TextColor="#ea2763" FontSize="Small"/>
+            <Label Text="{ Binding Address }"/>
+            <Label Text="O que recebe" FontAttributes="Bold" TextColor="#ea2763" FontSize="Small"/>
+            <Label Text="{ Binding What }"/>
+            <Label Text="Descrição" FontAttributes="Bold" TextColor="#ea2763" FontSize="Small"/>
+            <Label Text="{ Binding Description }"/>
+            <Label Text="Contato" FontAttributes="Bold" TextColor="#ea2763" FontSize="Small"/>
+            <Label Text="{ Binding Contato }"/>
         </StackLayout>
         
 	</ContentPage.Content>
