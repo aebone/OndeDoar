@@ -1,6 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
+﻿using System.Diagnostics;
+using Plugin.Geolocator;
 using Xamarin.Forms;
 using Xamarin.Forms.Maps;
 
@@ -22,10 +21,16 @@ namespace OndeDoar.View
 
         private async void GetMap()
         {
+			// Geolacator
+			var locator = CrossGeolocator.Current;
+			locator.DesiredAccuracy = 50;
+
+			var myPosition = await locator.GetPositionAsync(timeoutMilliseconds: 10000);
+
             // Map
-			var map = new Map(
-			MapSpan.FromCenterAndRadius(
-					new Position(-30.023067, -51.1743), Distance.FromMiles(5)))
+            var map = new Map(
+            MapSpan.FromCenterAndRadius(
+                    new Position(myPosition.Latitude, myPosition.Longitude), Distance.FromMiles(5)))
 			{
 				IsShowingUser = true,
 				HeightRequest = 100,

@@ -6,18 +6,20 @@
     Title="Locais (Lista)">
 
     <StackLayout Padding="10" Spacing="10">
-        <Button Text="Sincronizar" Command="{Binding GetPlacesCommand}"/>
         <ActivityIndicator IsRunning="{Binding IsBusy}" IsVisible="{Binding IsBusy}"/>
 
-        <ListView ItemsSource="{Binding Places}" RowHeight="60" Header="Locais">
+        <ListView ItemsSource="{Binding Places}" SelectedItem="{Binding SelectedItem}">
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <TextCell  Text="{Binding Name}"
-                Detail="{Binding What}"
-                TextColor="#f35e20"
-                DetailColor="#503026" />
-       </DataTemplate>
-     </ListView.ItemTemplate>
+                    <ImageCell  
+                        ImageSource="icon.png" 
+                        Text="{Binding Name}"
+                        Detail="{Binding Description}"
+                        TextColor="#ea2763"
+                        DetailColor="#503026" 
+                    />
+                </DataTemplate>
+            </ListView.ItemTemplate>
         </ListView>
     </StackLayout>
     

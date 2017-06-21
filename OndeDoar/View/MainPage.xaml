@@ -7,13 +7,17 @@
     Title="Início"
     BackgroundImage="bg.jpg">
 
-    <Grid Padding="20">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Name="MenuItem1" Order="Secondary" Text="Privacidade" Priority="0" />
+    </ContentPage.ToolbarItems>
+
+    <Grid Padding="18">
         
         <Grid.RowDefinitions>
-            <RowDefinition Height="150" ></RowDefinition>
-            <RowDefinition Height="112" ></RowDefinition>
-            <RowDefinition Height="150" ></RowDefinition>
-            <RowDefinition Height="150"></RowDefinition>
+            <RowDefinition Height="134"></RowDefinition>
+            <RowDefinition Height="98"></RowDefinition>
+            <RowDefinition Height="140"></RowDefinition>
+            <RowDefinition Height="140"></RowDefinition>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition></ColumnDefinition>
@@ -22,14 +26,14 @@
 
         <Image Source="logo.png" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"/>
 
-        <StackLayout Padding="8" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" BackgroundColor="Black" Opacity="0.5">
-            <Label Text="Consulte locais para doação de roupas, alimentos e outros itens. Se você tem uma ONG ou recolhe doaçãos para repassar para a comunidade, cadastre aqui." FontSize="18" HorizontalTextAlignment="Center" TextColor="White" FontAttributes="Bold" Opacity="0.9" />
+        <StackLayout Padding="8" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" BackgroundColor="Black" Opacity="0.4">
+            <Label Text="Consulte locais para doação de roupas, alimentos e outros itens. Se você tem uma ONG ou recolhe doaçãos para repassar para a comunidade, cadastre aqui." FontSize="16" HorizontalTextAlignment="Center" TextColor="White" FontAttributes="Bold" Opacity="0.9" />
         </StackLayout>
         
         <Button Command="{ Binding ShowMapCommand }" Text="Ver locais no mapa" Grid.Row="2" Grid.Column="0" BackgroundColor="#074C81"  TextColor="White" />
         <Button Command="{ Binding ShowListCommand }" Text="Ver lista de locais" Grid.Row="2" Grid.Column="1"  BackgroundColor="#287dbe" TextColor="White" />
-        <Button Command="{ Binding NewPlaceCommand }" Text="Enviar um local" Grid.Row="3" Grid.Column="0"  BackgroundColor="#287dbe" TextColor="White" />
-        <Button Command="{ Binding ShowFaqCommand }" Text="FAQ" Grid.Row="3" Grid.Column="1" BackgroundColor="#074C81" TextColor="White"  />
+        <Button Command="{ Binding NewPlaceCommand }" Text="Cadastrar um local" Grid.Row="3" Grid.Column="0"  BackgroundColor="#287dbe" TextColor="White" />
+        <Button Command="{ Binding ShowFaqCommand }" Text="Info" Grid.Row="3" Grid.Column="1" BackgroundColor="#074C81" TextColor="White"  />
 
     </Grid>
 </ContentPage>

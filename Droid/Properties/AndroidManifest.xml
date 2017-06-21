@@ -8,7 +8,10 @@
 	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
 	<uses-permission android:name="android.permission.INTERNET" />
-	<application android:label="OndeDoar">
+	<application 
+		android:label="OndeDoar"
+		android:hardwareAccelerated="false"
+        android:largeHeap="true">
 		<meta-data 
 		    android:name="com.google.android.maps.v2.API_KEY" 
 		    android:value="AIzaSyAWC0YLM6kT8QwJ8Ywtgvy7Up7sYLMzPEQ" />

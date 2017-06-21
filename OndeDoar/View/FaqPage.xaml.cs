@@ -11,7 +11,6 @@ namespace OndeDoar.View
         public FaqPage()
         {
             InitializeComponent();
-
         }
 
         private void BtnCloseClicked(object sender, EventArgs args) {

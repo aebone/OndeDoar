@@ -3,8 +3,12 @@
     xmlns="http://xamarin.com/schemas/2014/forms" 
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
     x:Class="OndeDoar.View.FaqPage"
-    Title="FAQ">
+    Title="Info">
 
-    <Button Text="Fechar" Clicked="BtnCloseClicked"/>
+    <StackLayout Padding="22" Orientation="Vertical" VerticalOptions="Center">
 
+        <Label Text="Onde Doar é uma plataforma para cadastro e consulta de locais para doação de itens como roupas, alimentos, eletrônicos e eletrodomésticos. Se você recebe doações e repassa para quem necessita, faça seu cadastro. Não deixe de detalhar as ações que são realizadas pois o cadastro será analisado." HorizontalTextAlignment="Center"></Label>
+        <Button Text="Fechar" BackgroundColor="#287dbe" TextColor="White" Clicked="BtnCloseClicked"/>
+
+    </StackLayout>
 </ContentPage>

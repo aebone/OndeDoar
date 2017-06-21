@@ -42,6 +42,9 @@
     <EmbeddedResource Include="View\NewPlacePage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\ListDetailPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.xaml.cs">
@@ -70,6 +73,10 @@
     <Compile Include="Service\AzureService.cs" />
     <Compile Include="ViewModel\NewPlaceViewModel.cs" />
     <Compile Include="ViewModel\ListViewModel.cs" />
+    <Compile Include="View\ListDetailPage.xaml.cs">
+      <DependentUpon>ListDetailPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModel\ListDetailViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="View\" />
@@ -103,6 +110,12 @@
       <HintPath>..\packages\Microsoft.Azure.Mobile.Client.3.1.0\lib\portable-win+net45+wp8+wpa81+monotouch+monoandroid\Microsoft.WindowsAzure.Mobile.dll</HintPath>
     </Reference>
     <Reference Include="System.Net.Http" />
+    <Reference Include="Plugin.Geolocator.Abstractions">
+      <HintPath>..\packages\Xam.Plugin.Geolocator.3.0.4\lib\portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10+UAP10\Plugin.Geolocator.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.Geolocator">
+      <HintPath>..\packages\Xam.Plugin.Geolocator.3.0.4\lib\portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10+UAP10\Plugin.Geolocator.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

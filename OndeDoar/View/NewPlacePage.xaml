@@ -5,32 +5,31 @@
     x:Class="OndeDoar.View.NewPlacePage"
     Title="Adicionar Local">
 
-    <StackLayout Padding="20">
+    <ScrollView>
+        <StackLayout Padding="20">
 
-        <Label Text="Preencha os campos abaixo" Margin="0,0,0,16" FontSize="Large"></Label>
+            <Label FontSize="Small" HorizontalTextAlignment="Start" Margin="0, 10, 0, 10" FontAttributes="Italic" TextColor="#eb215e">* Campos obrigatórios</Label>
 
-        <Label FontSize="Small" HorizontalTextAlignment="Start" Margin="0, 10, 0, 16" FontAttributes="Italic">* Campos obrigatórios</Label>
+            <Label FontSize="Small" HorizontalTextAlignment="Start" Margin="0, 10, 0, 0">Nome do local:*</Label>
+            <Entry Text="{Binding NameText}"></Entry>
 
-        <Label FontSize="Medium" HorizontalTextAlignment="Start" Margin="0, 10, 0, 0">Nome do local:*</Label>
-        <Entry Text="{Binding NameText}"></Entry>
+            <Label FontSize="Small" HorizontalTextAlignment="Start" Margin="0, 10, 0, 0">Endereço:* (Informe rua, número e cidade)</Label>
+            <Entry Text="{Binding AddressText}"></Entry>
 
-        <Label FontSize="Medium" HorizontalTextAlignment="Start" Margin="0, 10, 0, 0">Endereço:*</Label>
-        <Entry Text="{Binding AddressText}"></Entry>
+            <Label FontSize="Small" HorizontalTextAlignment="Start" Margin="0, 10, 0, 0">Descrição: (Informe detalhes, se o local é para doação temporária e alguma ação já realizada)</Label>
+            <Editor Text="{Binding WhatText}"></Editor>
 
-        <Label FontSize="Medium" HorizontalTextAlignment="Start" Margin="0, 10, 0, 0">Descrição: (Informe mais detalhes como se o local é para doação temporária)</Label>
-        <Editor Text="{Binding WhatText}"></Editor>
+            <Label FontSize="Small" HorizontalTextAlignment="Start" Margin="0, 10, 0, 0">O que recebe?:*</Label>
+            <Entry Text="{Binding CategoryText}"></Entry>
 
-        <Label FontSize="Medium" HorizontalTextAlignment="Start" Margin="0, 10, 0, 0">Tipo de Doação:*</Label>
-        <Entry Text="{Binding CategoryText}"></Entry>
+            <Label FontSize="Small" HorizontalTextAlignment="Start" Margin="0, 10, 0, 0">Fone:</Label>
+            <Entry Text="{Binding PhoneText}"></Entry>
 
-        <Label FontSize="Medium" HorizontalTextAlignment="Start" Margin="0, 10, 0, 0">Fone:</Label>
-        <Entry Text="{Binding PhoneText}"></Entry>
+            <Label FontSize="Small" HorizontalTextAlignment="Start" Margin="0, 10, 0, 0">E-mail:</Label>
+            <Entry Text="{Binding EmailText}"></Entry>
 
-        <Label FontSize="Medium" HorizontalTextAlignment="Start" Margin="0, 10, 0, 0">E-mail:</Label>
-        <Entry Text="{Binding EmailText}"></Entry>
+            <Button Text="Cadastrar Local" Margin="0,20,0,0" Command="{Binding AddPlaceCommand}" HeightRequest="60" FontAttributes="Bold"/> 
 
-        <Button Text="Cadastrar Local" Margin="0,20,0,0" Command="{Binding AddPlaceCommand}" HeightRequest="60" FontAttributes="Bold"/> 
-
-    </StackLayout>
-
+        </StackLayout>
+    </ScrollView>
 </ContentPage>
