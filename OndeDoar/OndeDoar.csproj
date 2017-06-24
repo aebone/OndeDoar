@@ -45,6 +45,9 @@
     <EmbeddedResource Include="View\ListDetailPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\PrivacyPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.xaml.cs">
@@ -77,6 +80,9 @@
       <DependentUpon>ListDetailPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="ViewModel\ListDetailViewModel.cs" />
+    <Compile Include="View\PrivacyPage.xaml.cs">
+      <DependentUpon>PrivacyPage.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="View\" />

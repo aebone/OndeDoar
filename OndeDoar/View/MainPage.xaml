@@ -8,7 +8,8 @@
     BackgroundImage="bg.jpg">
 
     <ContentPage.ToolbarItems>
-        <ToolbarItem Name="MenuItem1" Order="Secondary" Text="Privacidade" Priority="0" />
+        <ToolbarItem Name="MenuItem1" Order="Secondary" Text="Privacidade" Priority="0" Command="{Binding ShowPrivacyCommand}"/>
+        <ToolbarItem Name="MenuItem2" Order="Secondary" Text="Info" Priority="1" Command="{Binding ShowFaqCommand}"/>
     </ContentPage.ToolbarItems>
 
     <Grid Padding="18">
@@ -26,8 +27,8 @@
 
         <Image Source="logo.png" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"/>
 
-        <StackLayout Padding="8" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" BackgroundColor="Black" Opacity="0.4">
-            <Label Text="Plataforma para consulta e cadastro de locais para doação de roupas, alimentos, eletrônicos e outros itens." FontSize="16" HorizontalTextAlignment="Center" TextColor="White" FontAttributes="Bold" Opacity="0.9" />
+        <StackLayout Padding="50, 18, 50, 0" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Opacity="0.6" BackgroundColor="White">
+            <Label Text="CONSULTA E CADASTRO DE LOCAIS PARA DOAÇÃO" FontSize="14" HorizontalTextAlignment="Center" TextColor="Black" FontAttributes="Bold"/>
         </StackLayout>
         
         <Button Command="{ Binding ShowMapCommand }" Text="Ver locais no mapa" Grid.Row="2" Grid.Column="0" BackgroundColor="#074C81"  TextColor="White" />

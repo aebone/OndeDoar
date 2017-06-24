@@ -12,7 +12,7 @@ namespace OndeDoar.ViewModel
 		private string _nameText;
 		private string _addressText;
 		private string _whatText;
-		private string _categoryText;
+		private string _descriptionText;
 		private string _phoneText;
 		private string _emailText;
 
@@ -49,12 +49,12 @@ namespace OndeDoar.ViewModel
 			}
 		}
 
-		public string CategoryText
+		public string DescriptionText
 		{
-			get { return _categoryText; }
+			get { return _descriptionText; }
 			set
 			{
-				if (SetProperty(ref _categoryText, value))
+				if (SetProperty(ref _descriptionText, value))
 					AddPlaceCommand.ChangeCanExecute();
 			}
 		}
@@ -98,7 +98,7 @@ namespace OndeDoar.ViewModel
 			{
 				return false;
 			}
-			else if (string.IsNullOrWhiteSpace(CategoryText))
+            else if (string.IsNullOrWhiteSpace(WhatText))
 			{
 				return false;
 			}
@@ -108,17 +108,17 @@ namespace OndeDoar.ViewModel
 
 		private async void ExecuteAddPlaceCommand()
 		{
-             Debug.WriteLine("h8y87y6t6");
-             await Application.Current.MainPage.DisplayAlert("Atenção", "Local adicionado com sucesso. (Sujeito a verificação)", "OK");
-    
+            await Application.Current.MainPage.DisplayAlert("Atenção", "Local adicionado com sucesso. (Sujeito a verificação)", "OK");
+
 			await SaveTask(new Place { 
                 Name = NameText, 
                 Address = AddressText, 
-                Category = CategoryText, 
+                Description = DescriptionText, 
                 Email = EmailText, 
                 What = WhatText, 
                 Phone = PhoneText 
             });
+
         }
 
 		public async Task SaveTask(Place item)

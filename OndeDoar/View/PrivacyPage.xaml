@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    x:Class="OndeDoar.View.PrivacyPage"
+    Title="Política de Privacidade">
+    
+	 <StackLayout Padding="22" Orientation="Vertical" VerticalOptions="Center">
+
+        <Label Text="Política de Privacidade" FontAttributes="Bold" HorizontalOptions="Center" TextColor="#ea2763" FontSize="Large" Margin="0,0,0,10"/>
+        <Label Text="Este aplicativo não contém nenhuma característica que permite aos usuários dividir informações pessoais sem a intenção." HorizontalTextAlignment="Center"></Label>
+        <Button Text="Fechar" BackgroundColor="#287dbe" TextColor="White" Clicked="Handle_Clicked"/>
+
+    </StackLayout>
+</ContentPage>
